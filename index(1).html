@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080812">
+<title>ADAM ELAZRI | Gaming Hub</title>
+<style>
+:root{--bg:#07070d;--panel:#10101b;--panel2:#151522;--line:#292941;--text:#f7f7ff;--muted:#9a9ab0;--cyan:#00e5ff;--purple:#8b5cf6;--pink:#ff38c7;--gold:#ffd447;--green:#36f2a0;--red:#ff5577}
+*{box-sizing:border-box;margin:0;padding:0;font-family:Inter,Arial,Helvetica,sans-serif}html{scroll-behavior:smooth}body{min-height:100vh;background:radial-gradient(circle at 10% 0%,#18102e 0,transparent 28%),radial-gradient(circle at 95% 15%,#08232b 0,transparent 24%),var(--bg);color:var(--text);overflow-x:hidden}button,input{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}.hidden{display:none!important}#particles{position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}#flash{position:fixed;inset:0;background:#fff;opacity:0;pointer-events:none;z-index:9998}.flash{animation:flash .24s ease}@keyframes flash{from{opacity:.35}to{opacity:0}}.gradient{background:linear-gradient(90deg,var(--cyan),var(--purple),var(--pink));color:transparent;background-clip:text;-webkit-background-clip:text}.btn{border:0;border-radius:13px;padding:12px 16px;color:#fff;background:linear-gradient(100deg,#743ef0,#d82eb8);font-weight:900;box-shadow:0 8px 24px #8b5cf626;transition:transform .18s,filter .18s}.btn:hover{transform:translateY(-2px);filter:brightness(1.12)}.btn:disabled{opacity:.55;cursor:not-allowed;transform:none}.btn.secondary{background:#191928;border:1px solid #34344d;box-shadow:none}.btn.gold{background:linear-gradient(100deg,#a66b00,#ffe66b);color:#241600}.btn.red{background:linear-gradient(100deg,#991b3d,#ff5577)}.btn.green{background:linear-gradient(100deg,#008c61,#45f5ae);color:#032016}.full{width:100%}
+/* Login */
+#loginScreen{min-height:100vh;display:grid;place-items:center;padding:20px}.login{width:min(460px,100%);padding:34px;border-radius:28px;background:#0c0c15ed;border:1px solid #8b5cf64d;box-shadow:0 20px 100px #0008,0 0 60px #8b5cf61a;text-align:center;backdrop-filter:blur(18px)}.brand{font-size:clamp(26px,5vw,36px);font-weight:1000;letter-spacing:3px}.brand-sub{color:var(--muted);letter-spacing:3px;font-size:11px;font-weight:800;margin:9px 0 25px}.input{width:100%;padding:14px 15px;border:1px solid var(--line);border-radius:13px;background:#07070e;color:white;margin:7px 0;outline:none}.input:focus{border-color:var(--purple)}.note{font-size:11px;color:#82829a;line-height:1.6;margin-top:13px}
+/* Nav and main */
+nav{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 4%;background:#080810df;backdrop-filter:blur(18px);border-bottom:1px solid #ffffff12}.nav-brand{font-weight:1000;letter-spacing:2px;font-size:18px}.nav-stats{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end;align-items:center}.pill{border:1px solid #292940;background:#11111c;border-radius:11px;padding:8px 10px;font-size:12px;font-weight:900}.rank-pill{display:flex;align-items:center;gap:6px}main{width:min(1200px,93%);margin:auto;padding:28px 0 65px}.hero{position:relative;overflow:hidden;min-height:370px;display:flex;align-items:center;justify-content:space-between;gap:30px;padding:clamp(24px,5vw,50px);border:1px solid #ffffff16;border-radius:30px;background:linear-gradient(120deg,#8b5cf61b,#00e5ff09),#0b0b14db}.hero:after{content:"";position:absolute;width:320px;height:320px;right:-110px;top:-100px;background:var(--purple);filter:blur(115px);opacity:.18}.hero-content{position:relative;z-index:1}.eyebrow{font-size:12px;font-weight:1000;letter-spacing:3px;color:var(--cyan);margin-bottom:16px}.hero h1{font-size:clamp(42px,7vw,76px);line-height:.92;font-weight:1000}.hero p{max-width:630px;color:#b0b0c3;line-height:1.7;margin:19px 0}.hero-actions{display:flex;gap:10px;flex-wrap:wrap}.orb{position:relative;z-index:1;flex:none;display:grid;place-items:center;width:clamp(150px,22vw,235px);aspect-ratio:1;border-radius:50%;font-size:clamp(48px,8vw,78px);background:radial-gradient(circle,#141426 0 30%,transparent 31%),conic-gradient(var(--cyan),var(--purple),var(--pink),var(--cyan));box-shadow:0 0 45px #00e5ff28,0 0 80px #8b5cf640;animation:float 4s ease-in-out infinite}@keyframes float{50%{transform:translateY(-10px) rotate(3deg)}}.section{margin-top:30px;scroll-margin-top:90px}.section-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px}.section-head h2{font-size:clamp(19px,3vw,25px)}.section-head span{color:var(--muted);font-size:12px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.card{background:linear-gradient(145deg,#11111d,#0a0a12);border:1px solid var(--line);border-radius:19px;padding:20px;transition:.2s}.card:hover{border-color:#414162;transform:translateY(-3px)}.muted{color:var(--muted);font-size:13px;line-height:1.6}.game-icon{font-size:37px;margin-bottom:10px}.card h3{margin-bottom:8px}.card button.wide{width:100%;margin-top:10px}.status{min-height:22px;margin-top:10px;font-size:12px;color:var(--cyan);font-weight:800}.stat-big{font-size:34px;font-weight:1000;margin:12px 0}
+/* Rank */
+.rank-layout{display:grid;grid-template-columns:155px 1fr;gap:20px;align-items:center}.current-rank{text-align:center;padding:22px 10px;border-radius:18px;background:#080811;border:1px solid #303049}.rank-emoji{display:block;font-size:49px;margin-bottom:8px}.rank-name{font-size:13px;font-weight:1000;letter-spacing:1px}.progress-track{height:11px;background:#222235;border-radius:99px;overflow:hidden;margin-top:10px}.progress-fill{height:100%;width:0;background:linear-gradient(90deg,var(--cyan),var(--purple),var(--pink));transition:width .35s}.rank-list{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin-top:15px}.rank-item{text-align:center;padding:11px 4px;border:1px solid #25253a;border-radius:12px;background:#0a0a12}.rank-item .emoji{font-size:23px}.rank-item .name{font-size:9px;font-weight:1000;margin-top:4px}.rank-item .need{font-size:9px;color:#85859b;margin-top:3px}
+/* Store */
+.store-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}.store-item{text-align:center;padding:15px 9px;border:1px solid #28283d;border-radius:15px;background:#0e0e18}.store-item .emoji{font-size:29px}.store-item .name{font-size:12px;font-weight:1000;margin-top:6px}.store-item .price{font-size:12px;color:var(--gold);margin:7px 0}.store-item button{width:100%;padding:8px 4px;font-size:11px;box-shadow:none}
+/* Phone dealer */
+.dealer-grid{display:grid;grid-template-columns: .9fr 1.1fr;gap:14px}.dealer-panel{padding:21px;border:1px solid #2a2a40;border-radius:22px;background:radial-gradient(circle at 50% 20%,#8b5cf61c,transparent 45%),#0d0d16;min-width:0}.dealer-center{min-height:300px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}.dealer-icon{font-size:77px;margin:5px 0 12px;animation:float 2.7s ease-in-out infinite}.spin-buttons{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;width:100%;margin-top:17px}.spin-buttons .btn{padding:11px 5px;font-size:11px;line-height:1.5}.spin-desc{color:var(--muted);font-size:11px;margin-top:7px}.inventory{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;max-height:480px;overflow:auto;padding:2px}.phone-item{min-width:0;padding:12px;border-radius:14px;border:1px solid #29293e;background:#12121e;overflow-wrap:anywhere}.phone-model{font-size:12px;font-weight:1000;line-height:1.4}.phone-rarity{font-size:10px;font-weight:1000;margin-top:4px}.phone-sell{color:var(--gold);font-size:11px;margin-top:8px}.sell-btn{margin-top:8px;width:100%;border:1px solid #35354d;background:#1b1b2a;color:#fff;border-radius:9px;padding:8px;font-weight:900;font-size:11px}.inventory-empty{grid-column:1/-1;text-align:center;padding:30px 8px}
+/* Car game */
+.car-layout{display:grid;grid-template-columns:minmax(0,1fr) 230px;gap:14px}.game-screen{height:450px;position:relative;overflow:hidden;border:1px solid #2b2b40;border-radius:20px;background:#05050a}.game-screen canvas{width:100%;height:100%;display:block}.hud{position:absolute;top:10px;left:10px;right:10px;display:flex;justify-content:space-between;gap:7px;pointer-events:none}.hud span{font-size:11px;font-weight:1000;padding:8px 9px;border-radius:9px;background:#070710db;border:1px solid #ffffff17}.controls{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}.control-btn{border-radius:12px;min-height:55px;border:1px solid #34344a;background:#191927;color:white;font-size:21px;font-weight:1000}.control-btn.boost{grid-column:1/-1;background:linear-gradient(100deg,#5630d8,#943bfa)}.tip{margin-top:12px;padding:12px;border:1px solid #242439;border-radius:12px;color:#88889f;font-size:11px;line-height:1.6}
+/* leaderboard + footer */
+.leader-row{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 2px;border-bottom:1px solid #242438}.leader-row:last-child{border-bottom:0}.leader-left{display:flex;align-items:center;gap:10px}.position{width:28px;height:28px;display:grid;place-items:center;border-radius:50%;background:#1a1a29;font-size:12px;font-weight:1000}.leader-xp{font-size:12px;color:#b6b6cb}footer{text-align:center;padding:35px 5%;border-top:1px solid #ffffff12;color:#77778e}.youtube{display:inline-block;margin-top:14px;padding:12px 18px;border-radius:11px;background:#ff0033;color:#fff;text-decoration:none;font-weight:1000}#toast{position:fixed;right:17px;bottom:17px;z-index:9999;padding:13px 16px;max-width:min(360px,calc(100vw - 34px));border-radius:13px;background:#171725;border:1px solid #41415d;box-shadow:0 15px 40px #0008;font-size:13px;font-weight:900;opacity:0;transform:translateY(70px);transition:.25s;pointer-events:none}#toast.show{opacity:1;transform:translateY(0)}
+@media(max-width:850px){.hero{flex-direction:column;text-align:center}.hero p{margin-left:auto;margin-right:auto}.hero-actions{justify-content:center}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.car-layout{grid-template-columns:1fr}.rank-list{grid-template-columns:repeat(5,minmax(0,1fr))}}
+@media(max-width:620px){nav{align-items:flex-start;flex-direction:column}.nav-stats{justify-content:flex-start}.hero{padding:27px 19px}.grid{grid-template-columns:1fr}.rank-layout,.dealer-grid{grid-template-columns:1fr}.store-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.rank-list{grid-template-columns:repeat(2,minmax(0,1fr))}.inventory{grid-template-columns:repeat(2,minmax(0,1fr))}.spin-buttons .btn{font-size:10px;padding:10px 2px}.game-screen{height:410px}.orb{width:160px}.section-head{align-items:flex-start;flex-direction:column}.login{padding:27px 20px}}
+</style>
+</head>
+<body>
+<canvas id="particles"></canvas><div id="flash"></div>
+
+<section id="loginScreen">
+  <div class="login">
+    <div class="brand gradient">ADAM ELAZRI</div>
+    <div class="brand-sub">CREATOR GAMING HUB</div>
+    <input class="input" id="usernameInput" type="text" maxlength="20" placeholder="Username" autocomplete="nickname">
+    <input class="input" id="emailInput" type="email" placeholder="Gmail address" autocomplete="email">
+    <button class="btn full" onclick="enterSite()">ENTER THE HUB 🚀</button>
+    <p class="note">Demo profile saved in this browser only. This page does not send your Gmail to a server and never asks for a password.</p>
+  </div>
+</section>
+
+<div id="app" class="hidden">
+<nav>
+  <div class="nav-brand gradient">ADAM ELAZRI</div>
+  <div class="nav-stats">
+    <span class="pill">👤 <span id="navUser">Player</span></span>
+    <span class="pill rank-pill"><span id="navRankIcon">🪨</span><span id="navRank">ROOKIE</span></span>
+    <span class="pill">⭐ LVL <span id="navLevel">1</span></span>
+    <span class="pill">💰 <span id="navCoins">1000</span></span>
+    <button class="pill" onclick="logoutDemo()">LOGOUT</button>
+  </div>
+</nav>
+<main>
+  <section class="hero">
+    <div class="hero-content">
+      <div class="eyebrow">THE BEST CREATOR IN THE WORLD</div>
+      <h1>ADAM<br><span class="gradient">ELAZRI</span></h1>
+      <p>Play mini-games, collect rare phones, use three different spins, unlock ranks and race through the neon streets.</p>
+      <div class="hero-actions">
+        <button class="btn" onclick="goTo('games')">PLAY NOW 🎮</button>
+        <button class="btn secondary" onclick="goTo('dealer')">PHONE DEALER 📱</button>
+        <button class="btn secondary" onclick="goTo('carGame')">2D CAR RACE 🏎️</button>
+      </div>
+    </div>
+    <div class="orb">⚡</div>
+  </section>
+
+  <section class="section">
+    <div class="section-head"><h2>🏆 YOUR RANK</h2><span>Earn XP and level up</span></div>
+    <div class="card rank-layout">
+      <div class="current-rank"><span class="rank-emoji" id="bigRankIcon">🪨</span><div class="rank-name" id="bigRankName">ROOKIE</div></div>
+      <div>
+        <h3 id="rankProgressText">Keep playing!</h3>
+        <div class="muted">Level XP: <strong id="currentXP">0</strong> / 100</div>
+        <div class="progress-track"><div class="progress-fill" id="xpBar"></div></div>
+        <div class="muted" style="margin-top:8px">Total XP: <strong id="totalXP">0</strong></div>
+        <div class="rank-list" id="rankList"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head"><h2>🎁 DAILY REWARD</h2><span>One claim per day</span></div>
+    <div class="card"><h3>Daily Creator Drop</h3><p class="muted">Claim 100 coins and 20 XP once each day.</p><button class="btn gold wide" onclick="claimDaily()">CLAIM 100 COINS 🎁</button><div class="status" id="dailyStatus"></div></div>
+  </section>
+
+  <section class="section" id="games">
+    <div class="section-head"><h2>🎮 MINI GAMES</h2><span>Play and earn coins</span></div>
+    <div class="grid">
+      <div class="card"><div class="game-icon">🛑</div><h3>STOP NUMBER</h3><p class="muted">Stop at exactly the target number between 1 and 20.</p><div class="stat-big" id="stopNumber">1</div><p class="muted">Target: <strong id="stopTarget">?</strong></p><button class="btn wide" onclick="startStop()">START</button><button class="btn secondary wide" onclick="stopStop()">STOP</button><div class="status" id="stopStatus"></div></div>
+      <div class="card"><div class="game-icon">🎰</div><h3>LUCKY SPIN</h3><p class="muted">A free game spin for a random coin prize.</p><div class="stat-big">🎡</div><button class="btn wide" onclick="luckySpin()">SPIN NOW</button><div class="status" id="luckyStatus"></div></div>
+      <div class="card"><div class="game-icon">👆</div><h3>QUICK CLICK</h3><p class="muted">Tap quickly for 5 seconds to earn coins.</p><div class="stat-big" id="clickCount">0</div><button class="btn wide" onclick="startClickGame()">START</button><button class="btn secondary wide" onclick="clickHit()">CLICK!</button><div class="status" id="clickStatus"></div></div>
+    </div>
+  </section>
+
+  <section class="section" id="store">
+    <div class="section-head"><h2>🛒 NAME STYLE STORE</h2><span>Unlock and equip styles</span></div>
+    <div class="store-grid" id="storeGrid"></div>
+  </section>
+
+  <section class="section" id="dealer">
+    <div class="section-head"><h2>📱 PHONE DEALER</h2><span>Normal · VIP · Secret</span></div>
+    <div class="dealer-grid">
+      <div class="dealer-panel"><div class="dealer-center">
+        <div class="dealer-icon" id="dealerIcon">📱</div>
+        <h2>PHONE SPIN</h2><p class="muted" style="margin-top:7px">Find phones, collect them, or sell them for coins.</p>
+        <div class="spin-buttons">
+          <button class="btn" id="normalSpinBtn" onclick="phoneSpin('normal')">📱 NORMAL<br>500 COINS</button>
+          <button class="btn gold" id="vipSpinBtn" onclick="phoneSpin('vip')">👑 VIP<br>1,500 COINS</button>
+          <button class="btn red" id="secretSpinBtn" onclick="phoneSpin('secret')">✨ SECRET<br>100,000 COINS</button>
+        </div>
+        <p class="spin-desc">Secret spins have very rare top prizes. Prices and sales are in-game coins.</p>
+        <div id="phoneResult" class="status" aria-live="polite"></div>
+      </div></div>
+      <div class="dealer-panel"><h3 style="margin-bottom:12px">📦 PHONE INVENTORY <span class="muted" id="phoneCount"></span></h3><div id="phoneInventory" class="inventory"></div></div>
+    </div>
+  </section>
+
+  <section class="section" id="carGame">
+    <div class="section-head"><h2>🏎️ 2D NEON CAR RACE</h2><span>Dodge obstacles · Collect coins</span></div>
+    <div class="car-layout">
+      <div class="game-screen"><canvas id="carCanvas"></canvas><div class="hud"><span>SCORE <b id="carScore">0</b></span><span>COINS <b id="carCoins">0</b></span><span>LIVES <b id="carLives">3</b></span></div></div>
+      <div class="card"><h3>RACE CONTROLS</h3><p class="muted">Use the buttons or keyboard arrow keys / A and D. Spacebar activates boost.</p><div class="controls"><button class="control-btn" onclick="moveCar('left')">◀ LEFT</button><button class="control-btn" onclick="moveCar('right')">RIGHT ▶</button><button class="control-btn boost" onclick="boostCar()">⚡ BOOST</button></div><button class="btn full" style="margin-top:12px" onclick="startCarGame()">START / RESTART RACE</button><div class="status" id="carStatus">Ready to race.</div><div class="tip">Every collected road coin adds to your race reward. Dodge red barriers. Game progress saves coins and XP in this browser.</div></div>
+    </div>
+  </section>
+
+  <section class="section"><div class="section-head"><h2>🏅 LEADERBOARD</h2><span>Example local leaderboard</span></div><div class="card" id="leaderboard"></div><p class="muted" style="margin-top:8px">This demo leaderboard is local, not a shared global ranking.</p></section>
+  <section class="section"><div class="card"><h3>⚙️ PROFILE</h3><p class="muted">Your demo data is kept in this browser's localStorage.</p><button class="btn red" style="margin-top:12px" onclick="resetAccount()">RESET DEMO PROFILE</button></div></section>
+</main>
+<footer><h2>THIS IS JUST THE BEGINNING 🚀</h2><p style="margin-top:8px">ADAM ELAZRI — THE BEST CREATOR IN THE WORLD</p><a class="youtube" href="https://www.youtube.com/@mr_evadon" target="_blank" rel="noopener">▶ VISIT MY YOUTUBE</a></footer>
+</div>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script>
+'use strict';
+/* Local-only profile. It is not real authentication and is not shared across browsers. */
+const STORAGE_KEY='adamElazriGamingHub_v3';
+const DEFAULT_DATA={username:'',email:'',coins:1000,xp:0,totalXP:0,level:1,styles:[],activeStyle:'normal',phones:[],lastDaily:''};
+let data;
+try{data=JSON.parse(localStorage.getItem(STORAGE_KEY)||'null')||{...DEFAULT_DATA};}catch{data={...DEFAULT_DATA};}
+if(typeof data.totalXP!=='number')data.totalXP=Number(data.xp)||0;
+if(typeof data.xp!=='number')data.xp=0;
+if(typeof data.level!=='number')data.level=1;
+if(typeof data.coins!=='number')data.coins=1000;
+if(!Array.isArray(data.styles))data.styles=[];
+if(!Array.isArray(data.phones))data.phones=[];
+function save(){try{localStorage.setItem(STORAGE_KEY,JSON.stringify(data));}catch(e){toast('Could not save browser data.');}}
+const RANKS=[{min:0,name:'ROOKIE',icon:'🪨'},{min:100,name:'BRONZE',icon:'🥉'},{min:300,name:'SILVER',icon:'🥈'},{min:600,name:'GOLD',icon:'🥇'},{min:1000,name:'DIAMOND',icon:'💎'},{min:1500,name:'MASTER',icon:'🔥'},{min:2500,name:'GRANDMASTER',icon:'👑'},{min:4000,name:'LEGEND',icon:'⚡'},{min:6000,name:'MYTHIC',icon:'🌌'},{min:10000,name:'CREATOR KING',icon:'🐉'}];
+function getRank(xp){let out=RANKS[0];for(const r of RANKS)if(xp>=r.min)out=r;return out;}
+function getNextRank(xp){return RANKS.find(r=>xp<r.min)||null;}
+function addXP(amount){amount=Math.max(0,Math.floor(amount));data.xp+=amount;data.totalXP+=amount;while(data.xp>=100){data.xp-=100;data.level++;data.coins+=50;toast('LEVEL UP! +50 COINS ⭐');playLevelSound();}save();updateUI();}
+function enterSite(){const user=document.getElementById('usernameInput').value.trim();const email=document.getElementById('emailInput').value.trim().toLowerCase();if(user.length<2){toast('Enter a username with at least 2 characters.');return;}if(!/^[^\s@]+@gmail\.com$/i.test(email)){toast('Enter a valid Gmail address.');return;}data.username=user;data.email=email;save();showApp();updateUI();toast('WELCOME '+user.toUpperCase()+' 🚀');playClickSound();}
+function showApp(){document.getElementById('loginScreen').classList.add('hidden');document.getElementById('app').classList.remove('hidden');}
+function logoutDemo(){document.getElementById('app').classList.add('hidden');document.getElementById('loginScreen').classList.remove('hidden');document.getElementById('usernameInput').value=data.username||'';document.getElementById('emailInput').value=data.email||'';}
+function resetAccount(){if(!confirm('Reset this local demo profile and all its phones/coins?'))return;localStorage.removeItem(STORAGE_KEY);location.reload();}
+function updateUI(){const rank=getRank(data.totalXP),next=getNextRank(data.totalXP);text('navUser',data.username||'Player');text('navCoins',data.coins.toLocaleString());text('navLevel',data.level);text('navRankIcon',rank.icon);text('navRank',rank.name);text('bigRankIcon',rank.icon);text('bigRankName',rank.name);text('currentXP',data.xp);text('totalXP',data.totalXP.toLocaleString());document.getElementById('xpBar').style.width=data.xp+'%';text('rankProgressText',next?(next.min-data.totalXP)+' XP until '+next.icon+' '+next.name:'FINAL RANK UNLOCKED 🐉');renderRanks();renderStore();renderPhones();renderLeaderboard();}
+function text(id,value){const el=document.getElementById(id);if(el)el.textContent=value;}
+function renderRanks(){const box=document.getElementById('rankList');box.innerHTML='';for(const r of RANKS){const unlocked=data.totalXP>=r.min;const el=document.createElement('div');el.className='rank-item';el.innerHTML='<div class="emoji">'+r.icon+'</div><div class="name">'+r.name+'</div><div class="need">'+r.min.toLocaleString()+' XP '+(unlocked?'✓':'🔒')+'</div>';if(unlocked)el.style.borderColor='#00e5ff66';box.appendChild(el);}}
+function claimDaily(){const today=new Date().toLocaleDateString('en-CA');if(data.lastDaily===today){text('dailyStatus','Already claimed today. Come back tomorrow.');toast('ALREADY CLAIMED ⏰');return;}data.lastDaily=today;data.coins+=100;save();addXP(20);text('dailyStatus','CLAIMED: +100 COINS +20 XP 🎁');toast('DAILY REWARD CLAIMED');playWinSound();}
+function goTo(id){document.getElementById(id)?.scrollIntoView({behavior:'smooth',block:'start'});}
+/* Store */
+const STORE_ITEMS=[{id:'red',name:'RED',icon:'🔴',price:100},{id:'gold',name:'GOLD',icon:'🟡',price:250},{id:'crystal',name:'CRYSTAL',icon:'💎',price:500},{id:'purple',name:'PURPLE',icon:'🟣',price:750},{id:'matrix',name:'MATRIX',icon:'🟢',price:1000}];
+function renderStore(){const grid=document.getElementById('storeGrid');grid.innerHTML='';for(const item of STORE_ITEMS){const owned=data.styles.includes(item.id),equipped=data.activeStyle===item.id;const el=document.createElement('div');el.className='store-item';el.innerHTML='<div class="emoji">'+item.icon+'</div><div class="name">'+item.name+'</div><div class="price">'+item.price.toLocaleString()+' 💰</div><button class="btn '+(equipped?'green':'secondary')+'" data-style="'+item.id+'">'+(equipped?'EQUIPPED ✓':owned?'EQUIP':'BUY')+'</button>';el.querySelector('button').addEventListener('click',()=>buyStyle(item.id));grid.appendChild(el);}}
+function buyStyle(id){const item=STORE_ITEMS.find(x=>x.id===id);if(!item)return;if(data.styles.includes(id)){data.activeStyle=id;save();updateUI();toast(item.name+' EQUIPPED ✨');return;}if(data.coins<item.price){toast('NOT ENOUGH COINS 💰');return;}data.coins-=item.price;data.styles.push(id);data.activeStyle=id;save();updateUI();toast(item.name+' UNLOCKED 🔥');playBuySound();}
+/* Phone collections: weights determine relative chance in each spin pool. Sell values are fictional in-game coins. */
+const NORMAL_PHONES=[
+{brand:'Apple',model:'iPhone 11',rarity:'COMMON',sell:100,weight:22},{brand:'Apple',model:'iPhone 12',rarity:'COMMON',sell:130,weight:21},{brand:'Apple',model:'iPhone 13',rarity:'COMMON',sell:160,weight:20},{brand:'Samsung',model:'Galaxy A25',rarity:'COMMON',sell:110,weight:20},{brand:'Samsung',model:'Galaxy A35',rarity:'COMMON',sell:150,weight:18},{brand:'Xiaomi',model:'Redmi Note 13',rarity:'COMMON',sell:100,weight:20},{brand:'Xiaomi',model:'Poco X6',rarity:'COMMON',sell:130,weight:17},{brand:'Motorola',model:'Moto G Power',rarity:'COMMON',sell:95,weight:16},{brand:'Google',model:'Pixel 7a',rarity:'COMMON',sell:155,weight:16},{brand:'OnePlus',model:'Nord CE',rarity:'COMMON',sell:140,weight:16},
+{brand:'Nothing',model:'Phone 2a',rarity:'UNCOMMON',sell:210,weight:12},{brand:'Samsung',model:'Galaxy A55',rarity:'UNCOMMON',sell:230,weight:11},{brand:'Xiaomi',model:'Redmi Note Pro',rarity:'UNCOMMON',sell:220,weight:11},{brand:'Motorola',model:'Edge Fusion',rarity:'UNCOMMON',sell:240,weight:10},{brand:'OnePlus',model:'Nord 4',rarity:'UNCOMMON',sell:250,weight:10},{brand:'Realme',model:'GT Neo',rarity:'UNCOMMON',sell:235,weight:9},
+{brand:'Apple',model:'iPhone 14 Plus',rarity:'RARE',sell:350,weight:7},{brand:'Samsung',model:'Galaxy S23',rarity:'RARE',sell:390,weight:7},{brand:'Google',model:'Pixel 8',rarity:'RARE',sell:370,weight:6},{brand:'OnePlus',model:'12R',rarity:'RARE',sell:380,weight:6},{brand:'Nothing',model:'Phone 2',rarity:'RARE',sell:360,weight:5},
+{brand:'Xiaomi',model:'14T Pro',rarity:'EPIC',sell:650,weight:3.5},{brand:'Motorola',model:'Razr',rarity:'EPIC',sell:700,weight:3},{brand:'Google',model:'Pixel 9 Pro',rarity:'EPIC',sell:800,weight:3},{brand:'Samsung',model:'Galaxy S24+',rarity:'EPIC',sell:850,weight:2.5},{brand:'OnePlus',model:'13',rarity:'EPIC',sell:900,weight:2.4},
+{brand:'Apple',model:'iPhone 16 Pro Max',rarity:'LEGENDARY',sell:1600,weight:1.1},{brand:'Samsung',model:'Galaxy Z Fold',rarity:'LEGENDARY',sell:1800,weight:1},{brand:'ASUS',model:'ROG Phone 8 Pro',rarity:'LEGENDARY',sell:1900,weight:.8},{brand:'REDMAGIC',model:'11 PRO',rarity:'MYTHIC',sell:10000,weight:.10},{brand:'Google',model:'Pixel Cosmic',rarity:'MYTHIC',sell:8000,weight:.08}
+];
+const VIP_PHONES=[
+{brand:'Apple',model:'iPhone 15 Pro',rarity:'RARE',sell:800,weight:10},{brand:'Samsung',model:'Galaxy S23 Ultra',rarity:'RARE',sell:900,weight:10},{brand:'Google',model:'Pixel 8 Pro',rarity:'RARE',sell:850,weight:10},{brand:'Xiaomi',model:'14 Ultra',rarity:'EPIC',sell:1400,weight:12},{brand:'Apple',model:'iPhone 16 Pro',rarity:'EPIC',sell:1600,weight:12},{brand:'Samsung',model:'Galaxy S24 Ultra',rarity:'EPIC',sell:1700,weight:12},{brand:'Motorola',model:'Razr Ultra',rarity:'LEGENDARY',sell:2500,weight:9},{brand:'ASUS',model:'ROG Phone 9',rarity:'LEGENDARY',sell:3200,weight:8},{brand:'Sony',model:'Xperia Pro',rarity:'LEGENDARY',sell:3000,weight:8},{brand:'REDMAGIC',model:'11 PRO',rarity:'MYTHIC',sell:10000,weight:6},{brand:'Xiaomi',model:'Cyber Ultra',rarity:'MYTHIC',sell:12000,weight:5},{brand:'Samsung',model:'Galaxy Z Fold Infinity',rarity:'CELESTIAL',sell:18000,weight:4},{brand:'Google',model:'Pixel Universe',rarity:'DIVINE',sell:25000,weight:3},{brand:'ASUS',model:'ROG Omega',rarity:'GODLY',sell:35000,weight:2},{brand:'OnePlus',model:'Nebula Prime',rarity:'COSMIC',sell:45000,weight:1.5},{brand:'Samsung',model:'Shadow X',rarity:'SECRET',sell:55000,weight:1},{brand:'CREATOR',model:'Phone OG',rarity:'OG',sell:75000,weight:.7}
+];
+const SECRET_PHONES=[
+{brand:'Apple',model:'iPhone Infinity',rarity:'COSMIC',sell:120000,weight:24},{brand:'Samsung',model:'Galaxy Ultra Infinity',rarity:'DIVINE',sell:150000,weight:22},{brand:'ASUS',model:'ROG Omega Ultimate',rarity:'GODLY',sell:180000,weight:18},{brand:'Google',model:'Pixel Universe X',rarity:'CELESTIAL',sell:220000,weight:15},{brand:'Motorola',model:'Razr Diamond Limited',rarity:'LIMITED',sell:280000,weight:12},{brand:'Sony',model:'Xperia Quantum',rarity:'SECRET',sell:350000,weight:10},{brand:'OnePlus',model:'Nebula Prime',rarity:'TRANSCENDENT',sell:450000,weight:8},{brand:'REDMAGIC',model:'11 PRO Gold Edition',rarity:'LIMITED',sell:500000,weight:6},{brand:'Samsung',model:'Galaxy Void',rarity:'SECRET',sell:650000,weight:4},{brand:'Apple',model:'iPhone Void Edition',rarity:'TRANSCENDENT',sell:800000,weight:2},{brand:'NEON',model:'TITAN',rarity:'OG',sell:900000,weight:1.2},{brand:'CREATOR',model:'X ULTIMATE',rarity:'SECRET',sell:950000,weight:.8},{brand:'Nokia',model:'1M',rarity:'GODLY',sell:1000000,weight:.12}
+];
+function weightedRandom(list){const total=list.reduce((sum,p)=>sum+p.weight,0);let roll=Math.random()*total;for(const p of list){roll-=p.weight;if(roll<=0)return p;}return list[list.length-1];}
+let phoneSpinBusy=false;
+function phoneSpin(type){if(phoneSpinBusy)return;const price=type==='secret'?100000:type==='vip'?1500:500;if(data.coins<price){toast('NOT ENOUGH COINS 💰');return;}const pool=type==='secret'?SECRET_PHONES:type==='vip'?VIP_PHONES:NORMAL_PHONES;phoneSpinBusy=true;data.coins-=price;save();updateUI();const result=weightedRandom(pool);const icon=document.getElementById('dealerIcon'),box=document.getElementById('phoneResult');icon.textContent='🎲';box.style.color=type==='secret'?'#ff5577':type==='vip'?'#ffd447':'#00e5ff';box.textContent=type==='secret'?'SECRET SPINNING... ✨':type==='vip'?'VIP SPINNING... 👑':'NORMAL SPINNING... 📱';let ticks=0;const timer=setInterval(()=>{icon.textContent=['📱','🎲','📲','✨'][ticks%4];ticks++;if(ticks>=20){clearInterval(timer);data.phones.push({id:makeId(),brand:result.brand,model:result.model,rarity:result.rarity,sell:result.sell});save();updateUI();icon.textContent=result.brand==='Nokia'?'☎️':'📱';box.textContent='YOU GOT '+result.brand+' '+result.model+' — '+result.rarity;box.style.color=rarityColor(result.rarity);phoneSpinBusy=false;toast(result.brand+' '+result.model+'! SELL VALUE '+result.sell.toLocaleString()+' COINS');playWinSound();flash();}},80);}
+function makeId(){return Date.now().toString(36)+Math.random().toString(36).slice(2);}
+function rarityColor(r){return ({COMMON:'#94a3b8',UNCOMMON:'#36f2a0',RARE:'#38bdf8',EPIC:'#b69cff',LEGENDARY:'#ffd447',MYTHIC:'#ff75ec',CELESTIAL:'#60a5fa',DIVINE:'#f0abfc',GODLY:'#ff718e',COSMIC:'#c084fc',SECRET:'#ff4d8d',LIMITED:'#fde047',TRANSCENDENT:'#ffffff',OG:'#ff8a00'})[r]||'#00e5ff';}
+function renderPhones(){const box=document.getElementById('phoneInventory');text('phoneCount','('+data.phones.length+')');box.innerHTML='';if(!data.phones.length){box.innerHTML='<div class="muted inventory-empty">No phones yet.<br>Try Normal, VIP or Secret Spin.</div>';return;}for(const phone of data.phones){const el=document.createElement('div');el.className='phone-item';const head=document.createElement('div');head.className='phone-model';head.textContent=(phone.brand||'Phone')+' '+(phone.model||'');const rarity=document.createElement('div');rarity.className='phone-rarity';rarity.style.color=rarityColor(phone.rarity);rarity.textContent=phone.rarity||'COMMON';const value=document.createElement('div');value.className='phone-sell';value.textContent='SELL: '+Number(phone.sell||0).toLocaleString()+' 💰';const button=document.createElement('button');button.className='sell-btn';button.textContent='SELL PHONE';button.addEventListener('click',()=>sellPhone(phone.id));el.append(head,rarity,value,button);box.appendChild(el);}}
+function sellPhone(id){const i=data.phones.findIndex(p=>String(p.id)===String(id));if(i<0)return;const phone=data.phones[i];data.coins+=Math.max(0,Number(phone.sell)||0);data.phones.splice(i,1);save();addXP(10);toast('SOLD FOR '+Number(phone.sell).toLocaleString()+' COINS 💰');playBuySound();}
+/* Stop Number */
+let stopTimer=null,stopRunning=false,stopValue=1,stopTarget=1;
+function startStop(){if(stopRunning){toast('GAME ALREADY RUNNING');return;}stopRunning=true;stopValue=1;stopTarget=Math.floor(Math.random()*20)+1;text('stopTarget',stopTarget);text('stopStatus','STOP EXACTLY ON '+stopTarget+'!');clearInterval(stopTimer);stopTimer=setInterval(()=>{text('stopNumber',stopValue);stopValue=stopValue%20+1;},100);}
+function stopStop(){if(!stopRunning){toast('START FIRST');return;}clearInterval(stopTimer);stopRunning=false;const shown=Number(document.getElementById('stopNumber').textContent);if(shown===stopTarget){const reward=100+Math.floor(Math.random()*151);data.coins+=reward;save();addXP(40);text('stopStatus','PERFECT! +'+reward+' COINS 🔥');toast('PERFECT STOP +'+reward);playWinSound();}else{text('stopStatus','MISSED! TARGET WAS '+stopTarget);toast('MISSED 😅');playLoseSound();}save();updateUI();}
+/* Lucky mini-game */
+let luckyBusy=false;function luckySpin(){if(luckyBusy)return;luckyBusy=true;const prizes=[25,50,75,100,150,200,300,500];let n=0;const status=document.getElementById('luckyStatus');const timer=setInterval(()=>{status.textContent='🎰 '+prizes[Math.floor(Math.random()*prizes.length)]+' COINS';n++;if(n>=14){clearInterval(timer);const prize=prizes[Math.floor(Math.random()*prizes.length)];data.coins+=prize;save();addXP(25);status.textContent='YOU WON '+prize+' COINS 🎉';toast('LUCKY SPIN +'+prize);playWinSound();luckyBusy=false;updateUI();}},90);}
+/* Quick click */
+let clickActive=false,clickCount=0,clickTimer=null;function startClickGame(){if(clickActive)return;clickActive=true;clickCount=0;text('clickCount','0');text('clickStatus','CLICK FOR 5 SECONDS!');clearTimeout(clickTimer);clickTimer=setTimeout(()=>{clickActive=false;const reward=clickCount*2;data.coins+=reward;save();addXP(Math.min(50,clickCount));text('clickStatus','FINISHED! +'+reward+' COINS');toast('QUICK CLICK +'+reward);playWinSound();updateUI();},5000);}function clickHit(){if(!clickActive){toast('START FIRST');return;}clickCount++;text('clickCount',clickCount);playClickSound();}
+/* 2D car racing game */
+const carCanvas=document.getElementById('carCanvas'),carCtx=carCanvas.getContext('2d');let carRunning=false,carAnim=0,carLane=1,carScore=0,carCollected=0,carLives=3,carBoostFrames=0,roadOffset=0,obstacles=[],roadCoins=[],lastSpawn=0,lastCoinSpawn=0,lastFrame=0;
+function resizeCarCanvas(){const r=carCanvas.getBoundingClientRect(),dpr=Math.min(window.devicePixelRatio||1,2);carCanvas.width=Math.max(1,Math.floor(r.width*dpr));carCanvas.height=Math.max(1,Math.floor(r.height*dpr));carCtx.setTransform(dpr,0,0,dpr,0,0);drawCar();}window.addEventListener('resize',resizeCarCanvas);
+function road(){const w=carCanvas.clientWidth,h=carCanvas.clientHeight,rw=Math.min(w*.72,410),left=(w-rw)/2;return{w,h,rw,left,lw:rw/3};}
+function laneX(l){const r=road();return r.left+r.lw*l+r.lw/2;}
+function roundRect(ctx,x,y,w,h,r){ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath();}
+function drawRoad(){const r=road();carCtx.clearRect(0,0,r.w,r.h);carCtx.fillStyle='#06060c';carCtx.fillRect(0,0,r.w,r.h);carCtx.fillStyle='#10101c';carCtx.fillRect(r.left,0,r.rw,r.h);carCtx.fillStyle='#00e5ff';carCtx.fillRect(r.left-2,0,2,r.h);carCtx.fillRect(r.left+r.rw,0,2,r.h);carCtx.strokeStyle='#ffffff2b';carCtx.lineWidth=3;carCtx.setLineDash([25,24]);carCtx.lineDashOffset=-roadOffset;for(let i=1;i<3;i++){carCtx.beginPath();carCtx.moveTo(r.left+r.lw*i,0);carCtx.lineTo(r.left+r.lw*i,r.h);carCtx.stroke();}carCtx.setLineDash([]);}
+function drawCar(){if(!carCanvas.clientWidth||!carCanvas.clientHeight)return;drawRoad();const r=road();for(const o of obstacles){const x=laneX(o.lane);carCtx.fillStyle='#ff5577';roundRect(carCtx,x-21,o.y-25,42,54,9);carCtx.fill();carCtx.fillStyle='#ffd447';carCtx.fillRect(x-14,o.y-8,28,6);}for(const coin of roadCoins){const x=laneX(coin.lane);carCtx.beginPath();carCtx.fillStyle='#ffd447';carCtx.arc(x,coin.y,11,0,Math.PI*2);carCtx.fill();carCtx.strokeStyle='#fff3ab';carCtx.stroke();}const x=laneX(carLane),y=r.h-75;carCtx.fillStyle='#0008';carCtx.beginPath();carCtx.ellipse(x,y+28,24,8,0,0,Math.PI*2);carCtx.fill();carCtx.fillStyle='#8b5cf6';roundRect(carCtx,x-20,y-29,40,57,9);carCtx.fill();carCtx.fillStyle='#a8f7ff';roundRect(carCtx,x-14,y-19,28,15,5);carCtx.fill();carCtx.fillStyle='#00e5ff';carCtx.fillRect(x-14,y+14,8,5);carCtx.fillRect(x+6,y+14,8,5);}
+function resetCar(){carLane=1;carScore=0;carCollected=0;carLives=3;carBoostFrames=0;roadOffset=0;obstacles=[];roadCoins=[];lastSpawn=0;lastCoinSpawn=0;lastFrame=0;updateCarHUD();}
+function startCarGame(){if(carRunning){carRunning=false;if(carAnim)cancelAnimationFrame(carAnim);}resetCar();carRunning=true;text('carStatus','RACE STARTED — DODGE!');carAnim=requestAnimationFrame(carLoop);}
+function carLoop(ts){if(!carRunning)return;const dt=Math.min(35,ts-(lastFrame||ts));lastFrame=ts;const r=road(),speed=dt*.20*(carBoostFrames>0?1.75:1);roadOffset+=speed*2;carBoostFrames=Math.max(0,carBoostFrames-dt);lastSpawn+=dt;lastCoinSpawn+=dt;if(lastSpawn>850){obstacles.push({lane:Math.floor(Math.random()*3),y:-30});lastSpawn=0;}if(lastCoinSpawn>650){roadCoins.push({lane:Math.floor(Math.random()*3),y:-20});lastCoinSpawn=0;}for(let i=obstacles.length-1;i>=0;i--){const o=obstacles[i];o.y+=speed*1.9;if(o.lane===carLane&&o.y>r.h-122&&o.y<r.h-48){obstacles.splice(i,1);carLives--;toast('CRASH! LIFE -1');playLoseSound();if(carLives<=0){finishCarGame();return;}}else if(o.y>r.h+40){obstacles.splice(i,1);carScore+=10;}}for(let i=roadCoins.length-1;i>=0;i--){const q=roadCoins[i];q.y+=speed*1.7;if(q.lane===carLane&&q.y>r.h-125&&q.y<r.h-45){roadCoins.splice(i,1);carCollected++;carScore+=25;playClickSound();}else if(q.y>r.h+30)roadCoins.splice(i,1);}updateCarHUD();drawCar();carAnim=requestAnimationFrame(carLoop);}
+function updateCarHUD(){text('carScore',carScore);text('carCoins',carCollected);text('carLives',carLives);}
+function moveCar(dir){if(!carRunning){toast('START THE RACE FIRST');return;}carLane=dir==='left'?Math.max(0,carLane-1):Math.min(2,carLane+1);playClickSound();drawCar();}
+function boostCar(){if(!carRunning){toast('START THE RACE FIRST');return;}carBoostFrames=900;text('carStatus','BOOST ACTIVATED ⚡');playBuySound();}
+function finishCarGame(){carRunning=false;if(carAnim)cancelAnimationFrame(carAnim);const reward=carCollected*20+Math.floor(carScore/10);data.coins+=reward;save();addXP(Math.min(100,Math.floor(carScore/5)));text('carStatus','RACE OVER — +'+reward+' COINS 🏁');toast('RACE REWARD +'+reward+' COINS');playWinSound();updateUI();drawCar();}
+window.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'||e.key.toLowerCase()==='a'){if(!document.getElementById('app').classList.contains('hidden'))moveCar('left');}else if(e.key==='ArrowRight'||e.key.toLowerCase()==='d'){if(!document.getElementById('app').classList.contains('hidden'))moveCar('right');}else if(e.code==='Space'&&!document.getElementById('app').classList.contains('hidden')){if(carRunning){e.preventDefault();boostCar();}}});
+/* Local example leaderboard; not online/global. */
+function renderLeaderboard(){const board=document.getElementById('leaderboard');const rank=getRank(data.totalXP);const players=[{name:data.username||'PLAYER',xp:data.totalXP,icon:rank.icon},{name:'NEON_KING',xp:9100,icon:'🌌'},{name:'VOID_X',xp:6800,icon:'🌌'},{name:'PIXEL_LORD',xp:4300,icon:'⚡'},{name:'GHOST_99',xp:2900,icon:'👑'},{name:'RUSHER',xp:1800,icon:'🔥'}].sort((a,b)=>b.xp-a.xp);board.innerHTML='';players.forEach((p,i)=>{const row=document.createElement('div');row.className='leader-row';const left=document.createElement('div');left.className='leader-left';const pos=document.createElement('div');pos.className='position';pos.textContent=i+1;const name=document.createElement('strong');name.textContent=p.icon+' '+p.name;left.append(pos,name);const xp=document.createElement('span');xp.className='leader-xp';xp.textContent=p.xp.toLocaleString()+' XP';row.append(left,xp);board.appendChild(row);});}
+/* Toast + sounds */
+let toastHandle=null;function toast(msg){const el=document.getElementById('toast');el.textContent=msg;el.classList.add('show');clearTimeout(toastHandle);toastHandle=setTimeout(()=>el.classList.remove('show'),2300);}function flash(){const el=document.getElementById('flash');el.classList.remove('flash');void el.offsetWidth;el.classList.add('flash');}
+let audioContext=null;function beep(freq=700,duration=.07,type='sine'){try{audioContext ||= new(window.AudioContext||window.webkitAudioContext)();if(audioContext.state==='suspended')audioContext.resume();const osc=audioContext.createOscillator(),gain=audioContext.createGain();osc.type=type;osc.frequency.value=freq;gain.gain.setValueAtTime(.04,audioContext.currentTime);gain.gain.exponentialRampToValueAtTime(.001,audioContext.currentTime+duration);osc.connect(gain);gain.connect(audioContext.destination);osc.start();osc.stop(audioContext.currentTime+duration);}catch{}}
+function playClickSound(){beep(720,.045,'square');}function playBuySound(){beep(500,.07);setTimeout(()=>beep(820,.1),80);}function playWinSound(){beep(610,.08);setTimeout(()=>beep(830,.08),80);setTimeout(()=>beep(1080,.15),160);}function playLoseSound(){beep(210,.17,'sawtooth');}function playLevelSound(){beep(700,.08);setTimeout(()=>beep(950,.08),90);setTimeout(()=>beep(1200,.17),180);}
+/* Particle background */
+const pCanvas=document.getElementById('particles'),pctx=pCanvas.getContext('2d');let particles=[];function resizeParticles(){const dpr=Math.min(devicePixelRatio||1,2);pCanvas.width=Math.floor(innerWidth*dpr);pCanvas.height=Math.floor(innerHeight*dpr);pctx.setTransform(dpr,0,0,dpr,0,0);particles=Array.from({length:65},()=>({x:Math.random()*innerWidth,y:Math.random()*innerHeight,s:Math.random()*1.8+.4,v:Math.random()*.4+.1,a:Math.random()*.4+.1}));}window.addEventListener('resize',resizeParticles);resizeParticles();function animateParticles(){pctx.clearRect(0,0,innerWidth,innerHeight);for(const p of particles){p.y-=p.v;if(p.y<-5){p.y=innerHeight+5;p.x=Math.random()*innerWidth;}pctx.globalAlpha=p.a;pctx.fillStyle='#fff';pctx.beginPath();pctx.arc(p.x,p.y,p.s,0,Math.PI*2);pctx.fill();}pctx.globalAlpha=1;requestAnimationFrame(animateParticles);}animateParticles();
+/* Initialise UI and restore the local demo session. */
+if(data.username&&data.email){showApp();}else{document.getElementById('loginScreen').classList.remove('hidden');document.getElementById('app').classList.add('hidden');}
+updateUI();resizeCarCanvas();drawCar();
+</script>
+</body>
+</html>
